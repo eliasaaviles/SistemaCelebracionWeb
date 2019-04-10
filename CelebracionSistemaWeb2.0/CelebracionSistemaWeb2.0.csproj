@@ -44,10 +44,52 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.KeyVault.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Azure.KeyVault.Core.1.0.0\lib\net40\Microsoft.Azure.KeyVault.Core.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.8.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Data.Edm">
+      <HintPath>..\packages\Microsoft.Data.Edm.5.8.2\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData">
+      <HintPath>..\packages\Microsoft.Data.OData.5.8.2\lib\net40\Microsoft.Data.OData.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Data.Services.Client">
+      <HintPath>..\packages\Microsoft.Data.Services.Client.5.8.2\lib\net40\Microsoft.Data.Services.Client.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Configuration">
+      <HintPath>..\packages\Microsoft.WindowsAzure.ConfigurationManager.3.2.3\lib\net40\Microsoft.WindowsAzure.Configuration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Diagnostics, Version=2.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.ServiceRuntime, Version=2.7.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Storage">
+      <HintPath>..\packages\WindowsAzure.Storage.8.5.0\lib\net45\Microsoft.WindowsAzure.Storage.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Spatial">
+      <HintPath>..\packages\System.Spatial.5.8.2\lib\net40\System.Spatial.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -66,19 +108,173 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Default.Master" />
+    <Content Include="css\bootstrap-theme.css.map" />
+    <Content Include="css\bootstrap-theme.min.css.map" />
+    <Content Include="css\bootstrap.css.map" />
+    <Content Include="css\bootstrap.min.css.map" />
+    <Content Include="Connected Services\sistemawebcelebracionAzureStorage\ConnectedService.json" />
     <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\SegundoParcialAplicada2 - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\SistemaCelebracionWeb - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\SistemaCelebracionWeb - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\SistemaWebCelebracionAPP - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\SistemaWebCelebracionAPP - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <Content Include="_DAL_ContextoDataSet.xsc">
+      <DependentUpon>_DAL_ContextoDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="_DAL_ContextoDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="_DAL_ContextoDataSet.xss">
+      <DependentUpon>_DAL_ContextoDataSet.xsd</DependentUpon>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Web.config" />
+    <Content Include="Boostrap\toastr.min.css" />
+    <Content Include="Boostrap\toastr.min.js" />
+    <Content Include="css\bootstrap-theme.css" />
+    <Content Include="css\bootstrap-theme.min.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\EstiloCss1.css" />
+    <Content Include="css\jquery-ui-1.9.2.custom.min.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="IMG\16252511_941733409262511_8832281376436182406_o.jpg" />
+    <Content Include="IMG\logo camino.png" />
+    <Content Include="IMG\virgen-del-silencio.jpg" />
+    <Content Include="UI\Consultas\cCanto.aspx" />
+    <Content Include="UI\Consultas\cCelebracion.aspx" />
+    <Content Include="UI\Consultas\cHermano.aspx" />
+    <Content Include="UI\Consultas\cTema.aspx" />
+    <Content Include="UI\Registros\rCanto.aspx" />
+    <Content Include="UI\Registros\rCelebracion.aspx" />
+    <Content Include="UI\Registros\rHermanos.aspx" />
+    <Content Include="UI\Registros\rTema.aspx" />
+    <Content Include="UI\Sesion\cUsuario.aspx" />
+    <Content Include="UI\Sesion\Registro.aspx" />
+    <Content Include="UI\Sesion\Sesion.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.Master.cs">
+      <DependentUpon>Default.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.Master.designer.cs">
+      <DependentUpon>Default.Master</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\Consultas\cCanto.aspx.cs">
+      <DependentUpon>cCanto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Consultas\cCanto.aspx.designer.cs">
+      <DependentUpon>cCanto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Consultas\cCelebracion.aspx.cs">
+      <DependentUpon>cCelebracion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Consultas\cCelebracion.aspx.designer.cs">
+      <DependentUpon>cCelebracion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Consultas\cHermano.aspx.cs">
+      <DependentUpon>cHermano.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Consultas\cHermano.aspx.designer.cs">
+      <DependentUpon>cHermano.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Consultas\cTema.aspx.cs">
+      <DependentUpon>cTema.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Consultas\cTema.aspx.designer.cs">
+      <DependentUpon>cTema.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Registros\rCanto.aspx.cs">
+      <DependentUpon>rCanto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Registros\rCanto.aspx.designer.cs">
+      <DependentUpon>rCanto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Registros\rCelebracion.aspx.cs">
+      <DependentUpon>rCelebracion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Registros\rCelebracion.aspx.designer.cs">
+      <DependentUpon>rCelebracion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Registros\rHermanos.aspx.cs">
+      <DependentUpon>rHermanos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Registros\rHermanos.aspx.designer.cs">
+      <DependentUpon>rHermanos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Registros\rTema.aspx.cs">
+      <DependentUpon>rTema.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Registros\rTema.aspx.designer.cs">
+      <DependentUpon>rTema.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Sesion\cUsuario.aspx.cs">
+      <DependentUpon>cUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Sesion\cUsuario.aspx.designer.cs">
+      <DependentUpon>cUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Sesion\Registro.aspx.cs">
+      <DependentUpon>Registro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Sesion\Registro.aspx.designer.cs">
+      <DependentUpon>Registro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Sesion\Sesion.aspx.cs">
+      <DependentUpon>Sesion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Sesion\Sesion.aspx.designer.cs">
+      <DependentUpon>Sesion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="util.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{1506A98A-CE3E-4154-8EF3-0B197E436BA3}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entidades\Entidades.csproj">
+      <Project>{2DFF6D3D-A897-472A-966F-E875787F5393}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="UI\Reportes\Celebracion.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

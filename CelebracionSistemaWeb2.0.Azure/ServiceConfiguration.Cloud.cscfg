@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="CelebracionSistemaWeb2.0.Azure" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="4" osVersion="*" schemaVersion="2015-04.2.6">
+  <Role name="CelebracionSistemaWeb2.0">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="sistemawebcelebracion_AzureStorageConnectionString" value="DefaultEndpointsProtocol=https;AccountName=sistemawebcelebracion;AccountKey=YfXkoUjnnysLQuprF5wY3l71GHuLpgcd1knQ8cWbl61UaVkMZUy7H0ZISHhv0AcbPU9jHRmO9+TXjNF36jJxdQ==;EndpointSuffix=core.windows.net" />
+    </ConfigurationSettings>
+  </Role>
+</ServiceConfiguration>

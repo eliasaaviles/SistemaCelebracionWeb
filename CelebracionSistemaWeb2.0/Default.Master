@@ -1,0 +1,90 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Default.master.cs" Inherits="CelebracionSistemaWeb2._0.Default" %>
+
+<!DOCTYPE html>
+
+
+<html>
+<head runat="server">
+
+    <title>SisCelebracionWeb</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script type="/text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+    <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="/Boostrap/toastr.min.js"></script>
+    <link href="/Boostrap/toastr.min.css" rel="stylesheet" />
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="/js/bootstrap.min.js"></script>
+
+</head>
+<nav class="navbar navbar-default" role="navigation">
+    <!-- El logotipo y el icono que despliega el menú se agrupan
+       para mostrarlos mejor en los dispositivos móviles -->
+    <div class="navbar-header">
+        <aside class="col-xs-2 col-sm-2 col-md-1 col-lg-1">
+
+            <asp:image imageurl="IMG/logo camino.png" runat="server" height="163px" width="105px" />
+        </aside>
+        <button type="button" class="navbar-toggle" data-toggle="collapse"
+            data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Desplegar navegación</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+    </div>
+
+    <!-- Agrupar los enlaces de navegación, los formularios y cualquier
+       otro elemento que se pueda ocultar al minimizar la barra -->
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="/">Inicio</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Registro <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="/UI/Registros/rTema.aspx">Tema</a></li>
+                    <li><a href="/UI/Registros/rCanto.aspx">Canto</a></li>
+                    <li><a href="/UI/Registros/rHermanos.aspx">Hermanos</a></li>
+                    <li><a href="/UI/Registros/rCelebracion.aspx">Celebracion</a></li>
+
+
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Colsulta <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="/UI/Consultas/cTema.aspx">Tema</a></li>
+                    <li><a href="/UI/Consultas/cCanto.aspx">Canto</a></li>
+                    <li><a href="/UI/Consultas/cHermano.aspx">Hermanos</a></li>
+
+
+                </ul>
+
+            </li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="/UI/Sesion/Sesion.aspx">Iniciar Sesion</a></li>
+            <aside class="col-xs-2 col-sm-2 col-md-1 col-lg-1">
+
+                <asp:image imageurl="IMG/virgen-del-silencio.jpg" runat="server" height="163px" width="105px" />
+            </aside>
+        </ul>
+    </div>
+</nav>
+<asp:contentplaceholder id="head" runat="server">
+    </asp:contentplaceholder>
+
+
+<form id="form1" runat="server">
+    <asp:contentplaceholder id="ContentPlaceHolder1" runat="server">
+            </asp:contentplaceholder>
+</form>
+
+</html>
+
